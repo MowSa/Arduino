@@ -18,7 +18,10 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   temp=dht.readTemperature();
-  Serial.println(temp);
+  Serial.print("Temperature = ");
+  Serial.print(temp);
+  Serial.println("C  ");
+  
   if (temp>28)
       digitalWrite(2, HIGH);
    else
